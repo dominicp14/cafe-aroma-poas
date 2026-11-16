@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Café Aroma de Poás: café de altura, repostería y ambiente acogedor en Alajuela, Costa Rica.">
+<title>Café Aroma de Poás | Alajuela</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="encabezado">
+  <a href="#inicio" class="logo">☕ Aroma de Poás</a>
+  <button id="btnMenu" class="btn-menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav id="menu" class="menu" aria-label="Principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#productos">Productos</a>
+    <a href="#galeria">Galería</a>
+    <a href="#faq">Preguntas</a>
+    <a href="#contacto">Contacto</a>
+    <button id="btnTema" class="btn-tema" aria-label="Cambiar tema">🌙</button>
+  </nav>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <div class="hero-in">
+    <div class="hero-txt">
+      <span class="eyebrow">Café de altura · Alajuela</span>
+      <h1>Café Aroma de Poás</h1>
+      <p>Bienvenido a tu rincón de café de altura, hecho con granos de las faldas del volcán Poás.</p>
+      <p class="estado"><span id="reloj"></span> · <strong id="estado"></strong></p>
+      <div class="botones"><a href="#productos" class="btn">Ver el menú</a><a href="#contacto" class="btn btn-claro">Visítanos</a></div>
+    </div>
+    <img class="hero-img" src="img/hero.svg" alt="Taza de café humeante">
+  </div>
+</section>
+
+<section id="nosotros" class="seccion">
+  <h2>Nosotros</h2>
+  <p class="centro">Nacimos en 2019 cuando doña Marta decidió vender el café de la finca familiar en un pequeño local de Alajuela. Hoy somos un punto de encuentro para vecinos, estudiantes y turistas.</p>
+  <div class="grid3">
+    <article class="tarjeta"><h3>Misión</h3><p>Servir café de calidad y apoyar a los pequeños productores de la zona.</p></article>
+    <article class="tarjeta"><h3>Visión</h3><p>Ser la cafetería de referencia en Alajuela por su sabor y su calidez.</p></article>
+    <article class="tarjeta"><h3>Valores</h3><p>Calidad, honestidad, comercio justo y atención cercana.</p></article>
+  </div>
+</section>
+
+<section id="productos" class="seccion alt">
+  <h2>Productos</h2>
+  <input type="search" id="buscador" placeholder="Buscar en el menú (ej. café, pastel)…" aria-label="Buscar productos">
+  <div class="grid3" id="listaProductos">
+    <article class="producto" data-nombre="espresso café"><img class="foto" src="img/espresso.svg" alt="Taza de espresso" loading="lazy"><h3>Espresso</h3><p>Intenso, de tueste medio.</p><span class="precio">₡1 500</span></article>
+    <article class="producto" data-nombre="capuchino café"><img class="foto" src="img/capuchino.svg" alt="Taza de capuchino" loading="lazy"><h3>Capuchino</h3><p>Espresso con leche vaporizada.</p><span class="precio">₡2 200</span></article>
+    <article class="producto" data-nombre="café helado frío"><img class="foto" src="img/cafe-helado.svg" alt="Vaso de café helado" loading="lazy"><h3>Café helado</h3><p>Frío, dulce y refrescante.</p><span class="precio">₡2 500</span></article>
+    <article class="producto" data-nombre="pastel queso postre"><img class="foto" src="img/pastel.svg" alt="Pastel de queso con salsa de mora" loading="lazy"><h3>Pastel de queso</h3><p>Casero, con salsa de mora.</p><span class="precio">₡2 800</span></article>
+    <article class="producto" data-nombre="croissant pan"><img class="foto" src="img/croissant.svg" alt="Croissant" loading="lazy"><h3>Croissant</h3><p>Horneado cada mañana.</p><span class="precio">₡1 800</span></article>
+    <article class="producto" data-nombre="sandwich almuerzo"><img class="foto" src="img/sandwich.svg" alt="Sándwich de pollo" loading="lazy"><h3>Sándwich de pollo</h3><p>Pan artesanal y vegetales frescos.</p><span class="precio">₡3 500</span></article>
+  </div>
+  <p id="sinResultados" class="centro" hidden>No encontramos productos con esa búsqueda.</p>
+</section>
+
+<section id="galeria" class="seccion">
+  <h2>Galería</h2>
+  <p class="centro">Toca una imagen para verla en grande.</p>
+  <div class="galeria">
+    <button class="item" data-desc="Nuestro local en el centro de Alajuela"><img src="img/local.svg" alt="Nuestro local en el centro de Alajuela" loading="lazy"></button>
+    <button class="item" data-desc="Preparando un espresso"><img src="img/espresso.svg" alt="Preparando un espresso" loading="lazy"></button>
+    <button class="item" data-desc="Postres caseros cada día"><img src="img/pastel.svg" alt="Postres caseros cada día" loading="lazy"></button>
+    <button class="item" data-desc="Granos de la finca familiar"><img src="img/granos.svg" alt="Granos de la finca familiar" loading="lazy"></button>
+    <button class="item" data-desc="Panadería recién horneada"><img src="img/croissant.svg" alt="Panadería recién horneada" loading="lazy"></button>
+    <button class="item" data-desc="Almuerzos frescos"><img src="img/sandwich.svg" alt="Almuerzos frescos" loading="lazy"></button>
+  </div>
+</section>
+
+<div id="visor" class="visor" hidden>
+  <div class="visor-caja"><div id="visorImg"></div><p id="visorTxt"></p><button id="cerrarVisor" class="btn">Cerrar</button></div>
+</div>
+
+<section id="faq" class="seccion alt">
+  <h2>Preguntas frecuentes</h2>
+  <div class="faq">
+    <button class="faq-q" aria-expanded="false">¿Tienen opciones sin lactosa?</button>
+    <div class="faq-a" hidden>Sí, ofrecemos leche de almendra y de avena sin costo extra.</div>
+    <button class="faq-q" aria-expanded="false">¿Aceptan tarjeta y SINPE Móvil?</button>
+    <div class="faq-a" hidden>Aceptamos efectivo, tarjeta y SINPE Móvil.</div>
+    <button class="faq-q" aria-expanded="false">¿Hacen pedidos para eventos?</button>
+    <div class="faq-a" hidden>Sí, escríbenos por WhatsApp con al menos tres días de anticipación.</div>
+  </div>
+</section>
+
+<section id="contacto" class="seccion">
+  <h2>Contacto</h2>
+  <div class="contacto">
+    <div>
+      <p>📞 Teléfono: <a href="tel:+50620000000">2000-0000</a></p>
+      <p>💬 WhatsApp: <a href="https://wa.me/50670000000" target="_blank" rel="noopener">7000-0000</a></p>
+      <p>✉️ <a href="mailto:hola@aromadepoas.example">hola@aromadepoas.example</a></p>
+      <p>📍 100 m norte de la Catedral, Alajuela, Costa Rica</p>
+      <p>🕗 Lunes a sábado: 7:00 a. m. – 7:00 p. m.<br>Domingo: 8:00 a. m. – 2:00 p. m.</p>
+      <p>Síguenos: <a href="#">Facebook</a> · <a href="#">Instagram</a></p>
+    </div>
+    <form id="formContacto" novalidate>
+      <label for="nombre">Nombre</label>
+      <input id="nombre" type="text" autocomplete="name"><small class="error" id="errNombre"></small>
+      <label for="correo">Correo</label>
+      <input id="correo" type="email" autocomplete="email"><small class="error" id="errCorreo"></small>
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" rows="4"></textarea><small class="error" id="errMensaje"></small>
+      <button type="submit" class="btn">Enviar mensaje</button>
+      <p id="exito" class="exito" hidden>¡Gracias! Tu mensaje fue enviado.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <p>© 2026 Café Aroma de Poás · Proyecto académico con datos ficticios</p>
+  <p>Visitas: <span id="visitas">0</span></p>
+</footer>
+<button id="btnArriba" class="arriba" aria-label="Volver arriba" hidden>↑</button>
+<script src="js/script.js"></script>
+</body>
+</html>

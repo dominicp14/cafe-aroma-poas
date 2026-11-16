@@ -1,0 +1,1 @@
+Coloca aqui tus fotos reales (logo.png, hero.jpg, etc.) y reemplaza los emojis del HTML por etiquetas img.
